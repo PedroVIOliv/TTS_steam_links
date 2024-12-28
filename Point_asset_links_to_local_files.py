@@ -42,7 +42,7 @@ def tts_default_locations():
         ]
     else:
         return [
-            f"couldn't match platform {sys.platform}, so don't know save game location"
+            f"Couldn't match platform {sys.platform}, so I don't know the default save game location. If you have given TTS_DIR_OVERRIDE the correct directory, then the script should still work."
         ]
 
 class CachedThing:

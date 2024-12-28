@@ -6,7 +6,7 @@ The script should work for Windows (tested on Windows 11), Linux (tested on Ubun
 1. [Have Python installed if you haven't already](https://www.python.org/downloads/). [How to check whether you have Python installed already](https://www.freecodecamp.org/news/check-python-version-how-to-check-py-in-mac-windows-and-linux/) 
 2. [Download this project (this link points to a zip of it)](https://github.com/FVMF/TTS_steam_links/archive/refs/heads/main.zip)
 3. Unzip the contents of the file downloaded in step 2 to any folder. 
-4. Open the terminal, and navigate to the folder of step 3. Then run this:
+4. Open the terminal (Linux/MacOS) or command prompt (Windows), and navigate to the folder of step 3. Then run this:
    ```
    python point_asset_links_to_local_files.py [FILE_LOCATION_1] [FILE_LOCATION2]
    ```

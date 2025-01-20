@@ -16,3 +16,10 @@ The script should work for Windows (tested on Windows 11), Linux (tested on Ubun
    ```
    The easiest way to get the file location is to drag and drop the file that you want to change the assets links of to the window of the terminal. Then the file location will be automatically copy-pasted in the terminal window. The script needs at least 1 file location, but can handle multiple files at once by adding more file locations seperated by a space.
 6. The terminal should show which URL's were replaced with local links and where you can find the backup file of a copy of the unaltered file.
+
+After you have replaced URL's with local links, you can follow these steps in TTS to upload your locally cached files to the Steam Cloud and fix the URL's the easy way: 
+1. Open TTS and open the altered file (the one with the local links). 
+2. Go to Modding -> Cloud Manager
+3. Click on the button with the up arrow. This will upload all locally cached files of the local links to your Steam Cloud
+4. When the uploading is done, save the result.
+5. You can share the result on the Steam workshop or directly with other people, and everything should work again. Of course, only files that have you cached locally will be fixed. If there are broken links in your save file for which you don't have the file cached locally, those won't be fixed.  

@@ -12,7 +12,7 @@ The script should work for Windows (tested on Windows 11), Linux (tested on Ubun
    python point_asset_links_to_local_files.py [FILE_LOCATION_1] [FILE_LOCATION2]
 
    # Use this one to only replace dead URL's in your save file.
-   pythin fix_dead_TTS_links_with_local_file_links.py [FILE_LOCATION_1]
+   python fix_dead_TTS_links_with_local_file_links.py [FILE_LOCATION_1] [FILE_LOCATION2]
    ```
-   The easiest way to get the file location is to drag and drop the file that you want to change the assets links of to the window of the terminal. Then the file location will be copy-pasted in the terminal window. The script needs at least 1 file location, but can handle multiple files at once by adding more file locations seperated by a space.
+   The easiest way to get the file location is to drag and drop the file that you want to change the assets links of to the window of the terminal. Then the file location will be automatically copy-pasted in the terminal window. The script needs at least 1 file location, but can handle multiple files at once by adding more file locations seperated by a space.
 6. The terminal should show which URL's were replaced with local links and where you can find the backup file of a copy of the unaltered file.

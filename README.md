@@ -3,10 +3,10 @@
 If you're having issues in Tabletop Simulator with files saved to the Steam Cloud, and you have all asset files cached locally, you can use this script to change all the URL's in your file to local file locations. The script will make a backup of the original file as well, so if something does go wrong, you still have the original file. 
 The script should work for Windows (tested on Windows 11), Linux (tested on Ubuntu), and MacOS (tested on Sequoia). The script assumes you have installed Tabletop Simulator in the default location for your Operating System. Follow these steps to use this script. 
 
-1. [Have Python installed if you haven't already](https://www.python.org/downloads/)
+1. [Have Python installed if you haven't already](https://www.python.org/downloads/). [How to check whether you have Python installed already](https://www.freecodecamp.org/news/check-python-version-how-to-check-py-in-mac-windows-and-linux/) 
 2. [Download this project (this link points to a zip of it)](https://github.com/FVMF/TTS_steam_links/archive/refs/heads/main.zip)
 3. Unzip the contents of the file downloaded in step 2 to any folder. 
-4. Open the terminal, and navigate to the folder of step 3. Then run this:
+4. Open the terminal (Linux/MacOS) or command prompt (Windows), and navigate to the folder of step 3. Then run this:
    ```
    python point_asset_links_to_local_files.py [FILE_LOCATION_1] [FILE_LOCATION2]
    ```

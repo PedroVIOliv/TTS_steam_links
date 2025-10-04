@@ -7,6 +7,9 @@ import sys
 import time
 from time import gmtime, strftime
 import requests
+import ctypes
+if sys.platform == 'win32':
+    from ctypes import wintypes
 
 # If your Tabletop Simulator data directory is in some alternative location,
 # paste it in the quotes below.
@@ -26,17 +29,18 @@ def tts_default_locations():
     elif sys.platform == "darwin":  # mac osx
         return [os.path.join(str(pathlib.Path.home()), "Library", "Tabletop Simulator")]
     elif sys.platform == "win32":
+        try:
+            CSIDL_PERSONAL = 5  # My Documents
+            SHGFP_TYPE_CURRENT = 0  # Get current, not default
+            buf = ctypes.create_unicode_buffer(wintypes.MAX_PATH)
+            ctypes.windll.shell32.SHGetFolderPathW(None, CSIDL_PERSONAL, None, SHGFP_TYPE_CURRENT, buf)
+            documents_path = buf.value
+        except (ImportError, OSError):
+            documents_path = os.path.join(os.environ["USERPROFILE"], "Documents")
+
         return [
             os.path.join(
-                os.environ["USERPROFILE"],
-                "Documents",
-                "My Games",
-                "Tabletop Simulator",
-            ),
-            os.path.join(
-                os.environ["USERPROFILE"],
-                "OneDrive",
-                "Documents",
+                documents_path,
                 "My Games",
                 "Tabletop Simulator",
             ),
